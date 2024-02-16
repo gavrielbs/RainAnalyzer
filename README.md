@@ -5,12 +5,12 @@ Rain plays a key role and its effects on plants ecosystems can be seen in the fo
 In order to understand how the rain affects the productivity of plants, it's yearly seasonality characteristics are needed to be extracted.
 In this project I will analyze time series of rain, downloaded from the Israel Meteorological Service's API.
 The characteristics I will extract are: 
-- yearly cumulative rain
-- rate of accumulation
-- season duration
-- yearly cumulative rain of the previous year two years before
-- average rain per rainy day
-- consecutive dry days between rain seasons
+- yearly cumulative rain (mm)
+- rate of accumulation (mm\day)
+- season duration (days)
+- yearly cumulative rain of the previous year two years before (mm)
+- average rain per rainy day (mm\day)
+- consecutive dry days between rain seasons (days)
 
  The output will include a .csv file with the extracted data, and plots of the rain along with its different characteristics.
 
