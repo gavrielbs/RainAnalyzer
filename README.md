@@ -12,7 +12,7 @@ The characteristics I will extract are:
 - average rain per rainy day
 - consecutive dry days between rain seasons
 
- The output will be a .csv file with the extracted data and plots of the rain and its different characteristics.
+ The output will be a .csv file with the extracted data, and plots of the rain along with its different characteristics.
 
  Gabriel Bar-Sella: [https://gavrielbs.github.io/](https://gavrielbs.github.io/)
  
