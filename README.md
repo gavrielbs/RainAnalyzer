@@ -57,6 +57,7 @@ pip install statsmodels
 
 
 **Linear Regression should look like this**
+![rain_season_duration over time](https://github.com/gavrielbs/RainAnalyzer/assets/88232723/8e75112f-f06f-4159-b6b2-6ae8c169f87a)
 
 
 
