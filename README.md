@@ -30,7 +30,7 @@ Plots:
 - heatmap of pearson correlation matrix between all the rain parameters
 - linear regression of each rain parameter over time
 
-Step 1: Install all required packages:
+**Step 1**: Install all required packages:
 ``` 
 pip install os
 pip install pandas
@@ -41,6 +41,9 @@ pip install matplotlib
 pip install sklearn
 pip install statsmodels
 ```
+**Step 2**: download this directory, including the python files: ``rain_analyzer.py``, ``rain_modules.py`` and place them in the same directory. make sure you 
+
+
 
  Gabriel Bar-Sella: [https://gavrielbs.github.io/](https://gavrielbs.github.io/)
  
