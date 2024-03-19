@@ -1,0 +1,10 @@
+python packages:
+
+os
+pandas
+numpy
+datetime
+seaborn
+matplotlib
+sklearn
+statsmodels
