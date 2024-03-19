@@ -6,12 +6,12 @@ In order to understand how the rain affects the productivity of plants, it's yea
 In this project I will analyze time series of rain, downloaded from the Israel Meteorological Service's API.
 
 Input data:
-A .csv file in the 'input' directory. 
-The file should have the columns 'date' and 'Rain' (in mm). 
+A .csv file in the `input` directory. 
+The file should have the columns `date` and `Rain` (in mm). 
 The 'date' should be in the format ``%Y-%m-%d``.
 
 Output data:
-'yearly_rain_data_df.csv' file in the 'output' directory, containing rain seasonality data for each year presented in the input file.
+`yearly_rain_data_df.csv` file in the `output` directory, containing rain seasonality data for each year presented in the input file.
 The extracted characteristics are: 
 - ``hydro_year`` : the hydrological year, starting on September 1st of the corresponding year
 - `rain_pulse_peak`: yearly cumulative rain (mm)
