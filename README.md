@@ -31,8 +31,8 @@ Plots:
 - linear regression of each rain parameter over time
 
 Step 1: Install all required packages:
-`ee
-dd
+`ee\n
+dd\n
 ff`
 
 `> pip install os
