@@ -31,6 +31,10 @@ Plots:
 - linear regression of each rain parameter over time
 
 Step 1: Install all required packages:
+`ee
+dd
+ff`
+
 `> pip install os
 > pip install pandas
 > pip install numpy
