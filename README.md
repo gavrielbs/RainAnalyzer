@@ -13,8 +13,8 @@ The 'date' should be in the format ``%Y-%m-%d``.
 Output data:
 'yearly_rain_data_df.csv' file in the 'output' directory, containing rain seasonality data for each year presented in the input file.
 The extracted characteristics are: 
-- hydro_year : the hydrological year, starting on September 1st of the corresponding year
-- rain_pulse_peak: yearly cumulative rain (mm)
+- ``hydro_year`` : the hydrological year, starting on September 1st of the corresponding year
+- `rain_pulse_peak`: yearly cumulative rain (mm)
 - rain_pulse_peak_1_years_before: yearly cumulative rain of the previous year (mm)
 - rain_pulse_peak_2_years_before: yearly cumulative rain of the 2 years before (mm)
 - rain_left_deriv: rate of accumulation (mm\day)
