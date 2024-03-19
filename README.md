@@ -1,4 +1,4 @@
-![image](https://github.com/gavrielbs/RainAnalyzer/assets/88232723/c6ad49d9-858f-4e4f-8e4d-89fcd41fe2e0)# Final Project - Rain Analyzer
+# Final Project - Rain Analyzer
 
 One of the questions raised in the lab lately is how patterns of rain affect ecosystem productivity.
 Rain plays a key role and its effects on plants ecosystems can be seen in the following year and even in the year after.  
