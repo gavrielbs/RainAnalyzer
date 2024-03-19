@@ -15,16 +15,16 @@ Output data:
 The extracted characteristics are: 
 - ``hydro_year`` : the hydrological year, starting on September 1st of the corresponding year
 - `rain_pulse_peak`: yearly cumulative rain (mm)
-- rain_pulse_peak_1_years_before: yearly cumulative rain of the previous year (mm)
-- rain_pulse_peak_2_years_before: yearly cumulative rain of the 2 years before (mm)
-- rain_left_deriv: rate of accumulation (mm\day)
-- rain_season_duration: season duration (days)
-- rain_season_start_from_hydro: number of days from the beginning of the hydrological year (September 1st) to the beginning of the rain season (days)
-- rain_season_end_from_hydro: number of days from the beginning of the hydrological year (September 1st) to the ending of the rain season (days)
-- rain_consecutive_dry_days: consecutive dry days between rain seasons (days)
-- avg_rain_per_rainy_day: average rain per rainy day (mm\day)
-- rain_dispersion: average rain per day in the rain season (mm\day)
-- rain_cdd_within_season: longest consecutive dry days within rain seasons (days)
+- `rain_pulse_peak_1_years_before`: yearly cumulative rain of the previous year (mm)
+- `rain_pulse_peak_2_years_before`: yearly cumulative rain of the 2 years before (mm)
+- `rain_left_deriv`: rate of accumulation (mm\day)
+- `rain_season_duration`: season duration (days)
+- `rain_season_start_from_hydro`: number of days from the beginning of the hydrological year (September 1st) to the beginning of the rain season (days)
+- `rain_season_end_from_hydro`: number of days from the beginning of the hydrological year (September 1st) to the ending of the rain season (days)
+- `rain_consecutive_dry_days`: consecutive dry days between rain seasons (days)
+- `avg_rain_per_rainy_day`: average rain per rainy day (mm\day)
+- `rain_dispersion`: average rain per day in the rain season (mm\day)
+- `rain_cdd_within_season`: longest consecutive dry days within rain seasons (days)
 
 Plots:
 - heatmap of pearson correlation matrix between all the rain parameters
