@@ -8,7 +8,7 @@ In this project I will analyze time series of rain, downloaded from the Israel M
 Input data:
 A .csv file in the 'input' directory. 
 The file should have the columns 'date' and 'Rain' (in mm). 
-The 'date' should be in the format '%Y-%m-%d'.
+The 'date' should be in the format ``%Y-%m-%d``.
 
 Output data:
 'yearly_rain_data_df.csv' file in the 'output' directory, containing rain seasonality data for each year presented in the input file.
@@ -41,8 +41,12 @@ pip install matplotlib
 pip install sklearn
 pip install statsmodels
 ```
-**Step 2**: download this directory, including the python files: ``rain_analyzer.py``, ``rain_modules.py`` and place them in the same directory. make sure you 
+**Step 2**: download this directory, including the python files: ``rain_analyzer.py``, ``rain_modules.py``, ``tests.py`` and place them in the same directory.
+ ``rain_modules.py`` consists of the different functions to calculate each rain parameter.
+``tests.py`` consists of tests to make sure the input file is in the right format.
+``rain_analyzer.py`` is the main program.
 
+![rain_graph](https://github.com/gavrielbs/RainAnalyzer/assets/88232723/32118f06-eaf7-4c8e-8a8a-47b618eebfc7)
 
 
  Gabriel Bar-Sella: [https://gavrielbs.github.io/](https://gavrielbs.github.io/)
