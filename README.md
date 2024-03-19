@@ -46,7 +46,16 @@ pip install statsmodels
 ``tests.py`` consists of tests to make sure the input file is in the right format.
 ``rain_analyzer.py`` is the main program.
 
+## Output examples
+
+**Rain graph should look like this**
 ![rain_graph](https://github.com/gavrielbs/RainAnalyzer/assets/88232723/32118f06-eaf7-4c8e-8a8a-47b618eebfc7)
+
+**Correlation matrix should look like this**
+![correlation_matrix](https://github.com/gavrielbs/RainAnalyzer/assets/88232723/1aec35c5-6615-4a84-b09d-1f98272401d7)
+
+**Linear Regression should look like this**
+![rain_season_duration over time](https://github.com/gavrielbs/RainAnalyzer/assets/88232723/6f23b850-ce5e-43ae-897a-8cbb03a47139)
 
 
  Gabriel Bar-Sella: [https://gavrielbs.github.io/](https://gavrielbs.github.io/)
