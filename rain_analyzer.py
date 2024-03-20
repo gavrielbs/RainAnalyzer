@@ -23,7 +23,8 @@ from rain_modules import (
     run_regressions
     )
 
-INPUT_PATH = 'input/'
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+INPUT_PATH = os.path.join(SCRIPT_DIR, 'input/')
 OUTPUT_PATH = 'output/'
 OUTPUT_FILE = 'yearly_rain_data_df'
 RAIN_BASE_VALUE = 1
