@@ -78,13 +78,13 @@ def main():
         yearly_rain_data_df = calc_cdd_within_season(rain_data, yearly_rain_data_df)
 
         # plot the rain over time
-        plot_the_data(rain_data, yearly_rain_data_df)
+        plot_the_data(rain_data, yearly_rain_data_df, SCRIPT_DIR)
 
         # plot the correlation matrixof all the features
-        plot_correlation_matrix(yearly_rain_data_df)
+        plot_correlation_matrix(yearly_rain_data_df, SCRIPT_DIR)
 
         #plot the regression analysis of each feature over time
-        run_regressions(yearly_rain_data_df)
+        run_regressions(yearly_rain_data_df, SCRIPT_DIR)
 
         yearly_rain_data_df = yearly_rain_data_df.drop(columns=['rain_season_start', 'rain_season_end'])
         
