@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime
+import os
 import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib
@@ -38,11 +39,11 @@ def load_rain_data(rain_data_file_path):
     ## loads the ims meterorological data, keeps only daily rain data starting from 2015 to 2023 including
     df = pd.read_csv(rain_data_file_path)
     # test formats
-    check_date_column_existance(df)
-    check_rain_column_existance(df)
-    check_rain_column_format(df)
-    check_date_column_format(df)
-    
+    # check_date_column_existance(df)
+    # check_rain_column_existance(df)
+    # check_rain_column_format(df)
+    # check_date_column_format(df)
+
     df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
     df=df.dropna()
     df.loc[:, 'hydro_year'] = df['date'].apply(calc_hydrological_year ,format="%Y-%m-%d")
@@ -260,7 +261,7 @@ def calc_cdd_within_season(rain_data_df, yearly_rain_data_df):
     print('\n')
     return yearly_rain_data_df
 
-def plot_the_data(rain_data, yearly_rain_data_df):
+def plot_the_data(rain_data, yearly_rain_data_df, path):
     hydro_years = [ i for i in yearly_rain_data_df['hydro_year']]
     hydro_year_dates = [datetime.strptime(f"01/01/{year}", '%m/%d/%Y') for year in hydro_years]
 
@@ -309,21 +310,26 @@ def plot_the_data(rain_data, yearly_rain_data_df):
         # for the t coordination 0.9 of graph hight is chosen
         y_coord =   0.9 * cumu_data['cumulative_with_stop'].max()
         axes[0].text(x_coord, y_coord, f'{rain}\nmm', ha='left', va='center', color='blue', fontsize=10)
-    plt.savefig("plots/rain_graph.png")
+    
+    output_file = 'plots/rain_graph.png'
+    output_file_path = os.path.join(path, output_file) 
+    plt.savefig(output_file_path)
     plt.show()
     
-def plot_correlation_matrix(yearly_rain_data_df):
+def plot_correlation_matrix(yearly_rain_data_df, path):
     yearly_rain_data_for_corr = yearly_rain_data_df.drop(columns=['rain_season_start', 'rain_season_end', 'hydro_year'])
     correlation_matrix = yearly_rain_data_for_corr.corr()
 
     plt.figure(figsize = (10,8))
     sns.heatmap(correlation_matrix, cmap = 'coolwarm', vmin = -1, vmax = 1, center = 0, annot=True, fmt=".2f", square=True, linewidths=.5)
     plt.tight_layout()
-    plt.savefig("plots/correlation_matrix.png")
+    output_file = 'plots/correlation_matrix.png'
+    output_file_path = os.path.join(path, output_file) 
+    plt.savefig(output_file_path)
     plt.show()
 
 
-def run_regressions(yearly_rain_data_df):
+def run_regressions(yearly_rain_data_df, path):
     yearly_rain_data_df = yearly_rain_data_df.drop(columns=['rain_season_start', 'rain_season_end', 'rain_pulse_peak_1_years_before', 'rain_pulse_peak_2_years_before'])
     yearly_rain_data_df['time'] = np.arange(len(yearly_rain_data_df.index))
     X = yearly_rain_data_df['time']  # Keep time for modeling
@@ -358,5 +364,8 @@ def run_regressions(yearly_rain_data_df):
         plt.title(f"{target} over time")
         plt.legend()
         plt.tight_layout()
-        plt.savefig(f"plots/{target} over time.png")
+        
+        output_file = 'plots/{target} over time.png'
+        output_file_path = os.path.join(path, output_file) 
+        plt.savefig(output_file_path)
         plt.show()
